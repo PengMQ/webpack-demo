@@ -1,8 +1,14 @@
 const path = require('path');
+var context = path.resolve(__dirname);
+console.log(context);
 module.exports = {
-	entry: './src/index.js',
+	context: context,
+	entry: {
+		index: './src/index.js',
+		main: './src/main.js'
+	},
 	output: {
-		filename: "main.js",
-		path: path.resolve(__dirname, 'dist')
+		path: path.resolve(__dirname, 'dist'),
+		filename: '[name].[hash].js',
 	}
 }
