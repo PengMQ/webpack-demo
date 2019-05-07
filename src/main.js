@@ -4,4 +4,4 @@ function component() {
 	element.innerHTML = _.join(['hello', 'webpack'], ' ');
 	return element;
 }
-// document.body.appendChild(component());
+document.body.appendChild(component());
